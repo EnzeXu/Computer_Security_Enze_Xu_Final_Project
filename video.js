@@ -18,7 +18,6 @@ var server = http.createServer(function (request, response) {
     }
     if (pathname.charAt(pathname.length-1)=="/"){
         pathname += "index.html";
-	//pathname += "41.pptx";
     }
     console.log(pathname + "(receive: " + request.url + ")")
     //var ext = path.extname(realPath);
